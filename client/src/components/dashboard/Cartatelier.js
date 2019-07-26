@@ -14,7 +14,7 @@ export default class Cart extends Component {
 
     }
     componentDidMount() {
-        axios.get('http://localhost:8080/api/ateliers')
+        axios.get('https://miseappp.herokuapp.com/api/ateliers')
             .then(response => {
                 console.log('Atelier tableau :', response.data)
                 this.setState({ atelier: response.data });

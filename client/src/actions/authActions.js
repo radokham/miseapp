@@ -8,7 +8,7 @@ import { GET_ERRORS, SET_CURRENT_COOKER, COOKER_LOADING } from "./types";
 // Register Cooker
 export const registerCooker = (cookerData, history) => dispatch => {
   axios
-    .post("http://localhost:8080/api/cookers/register", cookerData)
+    .post("https://miseappp.herokuapp.com/api/cookers/register", cookerData)
     .then(res => history.push("/login"))
     .catch(err =>
       dispatch({
@@ -21,7 +21,7 @@ export const registerCooker = (cookerData, history) => dispatch => {
 // Login - get Cooker token
 export const loginCooker = cookerData => dispatch => {
   axios
-    .post("http://localhost:8080/api/cookers/login", cookerData)
+    .post("https://miseappp.herokuapp.com/api/cookers/login", cookerData)
     .then(res => {
       // Save to localStorage
 

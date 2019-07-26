@@ -44,7 +44,7 @@ class Update extends React.Component {
     data.append('price',this.state.price);
     data.append('image', this.uploadInput.files[0]);
 
-    fetch('http://localhost:8080/api/ateliers/'+ this.props.match.params.id, {
+    fetch('https://miseappp.herokuapp.com/api/ateliers/'+ this.props.match.params.id, {
       method: 'PUT',
       body: data,
     }).then((response) => {
@@ -54,7 +54,7 @@ class Update extends React.Component {
      
       response.json().then((body) => {
         this.props.history.push("/features")
-        this.setState({ image: `http://localhost:8080/api/ateliers/${body.image}` });
+        this.setState({ image: `https://miseappp.herokuapp.com/api/ateliers/${body.image}` });
         console.log('Reussi.image', body.image);
   
       });

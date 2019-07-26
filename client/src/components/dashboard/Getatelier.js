@@ -13,7 +13,7 @@ export default class Tableau extends Component {
     }
     componentDidMount() {
         var tab = []
-        axios.get('http://localhost:8080/api/ateliers')
+        axios.get('https://miseappp.herokuapp.com/api/ateliers')
             .then(response => {
                 console.log('response.data: ',response.data)
                 for( let i=0;i<response.data.length;i++){

@@ -43,12 +43,12 @@ class Atelier extends React.Component {
     data.append('price',this.state.price);
     data.append('image', this.uploadInput.files[0]);
   
-    fetch('http://localhost:8080/api/ateliers', {
+    fetch('https://miseappp.herokuapp.com/api/ateliers', {
       method: 'POST',
       body: data,
     }).then((response) => {
       response.json().then((body) => {
-        this.setState({ image: `http://localhost:8080/api/ateliers/${body.image}` });
+        this.setState({ image: `https://miseappp.herokuapp.com/api/ateliers/${body.image}` });
         console.log('ity ilay body.fil',body.image);
         
       });
