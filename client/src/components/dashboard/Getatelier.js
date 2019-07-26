@@ -91,9 +91,9 @@ export default class Tableau extends Component {
          }}>Desactiver</button>):(<button className="btn btn-success" id="couleur"s onClick={(e)=>{
             e.preventDefault()
             console.log(obj._id)
-           axios.get("http://localhost:8080/afficher/"+obj._id).then(res=>{
+           axios.get("https://miseappp.herokuapp.com/afficher/"+obj._id).then(res=>{
             var tab = []
-            axios.get('http://localhost:8080/api/ateliers')
+            axios.get('https://miseappp.herokuapp.com/api/ateliers')
             .then(response => {
                 console.log('response.data: ',response.data)
                 for( let i=0;i<response.data.length;i++){
