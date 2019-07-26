@@ -55,7 +55,7 @@ export default class Tableau extends Component {
                     <tbody>
                         {
                             (this.state.atelier.length > 0) ? (this.state.atelier.map((obj) => {
-                                var a = "http://localhost:8080/atelier/"+obj.image
+                                var a = "https://miseappp.herokuapp.com/atelier/"+obj.image
                                 return <tr key={obj._id}>
                                    
                                     <td>{obj.title}</td>
@@ -69,9 +69,9 @@ export default class Tableau extends Component {
                                     <td><img id="imagetab" width="100px" height="90px" src={a} alt={obj.image}/></td>
                                     <td>{obj.visibilite===true ?(<button className="btn btn-success" id="couleur" onClick={(e)=>{
              e.preventDefault()
-            axios.get(" http://localhost:8080/masque/"+obj._id).then(res=>{
+            axios.get(" https://miseappp.herokuapp.com/masque/"+obj._id).then(res=>{
                 var tab = []
-            axios.get('http://localhost:8080/api/ateliers')
+            axios.get('https://miseappp.herokuapp.com/api/ateliers')
             .then(response => {
                 console.log('response.data: ',response.data)
                 for( let i=0;i<response.data.length;i++){

@@ -49,7 +49,7 @@ export default class Cart extends Component {
                     
                         {
                             (this.state.atelier.length > 0) ? (this.state.atelier.filter((params)=>params.visibilite).map((obj) => {
-                                var a = "http://localhost:8080/atelier/"+obj.image
+                                var a = "https://miseappp.herokuapp.com/atelier/"+obj.image
                                 return <MDBCol md-4 key={obj._id}>
                                 <MDBCard style={{ width: "32rem", fontWeight:"bold" }}>
                                 <MDBCardBody>
